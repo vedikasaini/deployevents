@@ -1,20 +1,21 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
 
-export default clerkMiddleware({
-    publicRoutes: [
-      '/',
-      '/events/:id',
-      '/api/webhook/clerk',
-      '/api/uploadthing',
-      '/api/webhook/stripe',
-    ],
-    ignoreRoutes: [
-      '/api/webhook/clerk',
-      '/api/uploadthing',
-      '/api/webhook/stripe',
-    ]
-  }
-);
+export default clerkMiddleware()
+  // {
+  //   publicRoutes: [
+  //     '/',
+  //     '/events/:id',
+  //     '/api/webhook/clerk',
+  //     '/api/uploadthing',
+  //     '/api/webhook/stripe',
+  //   ],
+  //   ignoreRoutes: [
+  //     '/api/webhook/clerk',
+  //     '/api/uploadthing',
+  //     '/api/webhook/stripe',
+  //   ]
+  // }
+// );
 
 export const config = {
   matcher: [
